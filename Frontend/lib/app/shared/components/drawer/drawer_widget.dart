@@ -41,7 +41,7 @@ class DrawerWidget extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(100),
                       child: Image.network(
-                        "https://www.lance.com.br/files/article_main/uploads/2021/02/28/603bdef934423.jpeg",
+                        "https://ef564920920608e03abb-7d34ef097b6ab6c586dfc84157128505.ssl.cf1.rackcdn.com/PostImagem/36734/foto-de-perfil-profissional_o1eh30s23km6j1lmm1k5r8cvinuj.JPG",
                         width: 120,
                         height: 120,
                       ),

@@ -29,10 +29,10 @@ abstract class _PedidoController with Store implements IFormController {
 
   @observable
   bool loading;
-  
+
   @observable
   BuildContext context;
-  
+
   @action
   void setContext(BuildContext value) => context = value;
 
@@ -98,7 +98,7 @@ abstract class _PedidoController with Store implements IFormController {
 
   @action
   Future<void> cancelarPedido() async {
-
+    await Modular.to.pushNamed('/$PRODUTO_ROUTE');
   }
 
   @action

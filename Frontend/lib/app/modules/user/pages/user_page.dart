@@ -86,16 +86,16 @@ class _UserPageState extends ModularState<UserPage, UserController> {
                             Icon(Icons.star, color: PaletaCores.primary),
                             Icon(Icons.star, color: PaletaCores.primary),
                             Icon(Icons.star, color: PaletaCores.primary),
+                            Icon(Icons.star, color: PaletaCores.primary),
+                            Icon(Icons.star, color: PaletaCores.primary),
                           ],
                         ),
                         DefaultSizedBox(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Expanded(child: _estatisticas(title: "Vendas", numeros: "154", theme: theme)),
                             Container(
                               height: 50,
-                              child: VerticalDivider(width: 2, color: Colors.black),
                             ),
                             Expanded(child: _estatisticas(title: "Avaliações", numeros: "127", theme: theme)),
                           ],
@@ -133,7 +133,7 @@ class _UserPageState extends ModularState<UserPage, UserController> {
                     padding: DefaultPadding.paddingButtonBottom,
                     child: GradienteButton(
                       colors: PaletaCores.gradiente,
-                      child: Text("ESCOLHER PRODUTOS", style: theme.textTheme.bodyText2),
+                      child: Text("FAZER PEDIDO", style: theme.textTheme.bodyText2),
                       onPressed: controller.fazerPedido,
                     ),
                   ),
