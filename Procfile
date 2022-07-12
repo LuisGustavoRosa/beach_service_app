@@ -1,2 +1,2 @@
 web: node server.js
-release: node build/ace migration:run --force
+release: node ace migration:run --force
