@@ -19,9 +19,14 @@
 
 
 
-const { Ignitor } = require('@adonisjs/ignitor')
-new Ignitor(require('@adonisjs/fold'))
-  .appRoot(__dirname)
-  .fireHttpServer()
-  .catch(console.error)
+// const { Ignitor } = require('@adonisjs/ignitor')
+// new Ignitor(require('@adonisjs/fold'))
+//   .appRoot(__dirname)
+//   .fireHttpServer()
+//   .catch(console.error)
 
+const express = require('express')
+const app = express();
+const port = process.env.PORT || 3000;
+const host = '0.0.0.0'
+app.listen(port, host, ()=> console.log(`server is runnning on port ${port}`))
