@@ -211,12 +211,13 @@ class PedidoPageState extends ModularState<PedidoPage, PedidoController> {
                   children: [
                     Observer(
                       builder: (_) => Visibility(
-                        visible: controller.appController.userStore.isVendedor && controller.pedidoRealizado && controller.pedidoStore.statusPedido == EnumStatusPedido.EmAberto || controller.pedidoStore.statusPedido == EnumStatusPedido.Aceito,
+                        visible: controller.appController.userStore.isConsumidor && controller.pedidoRealizado && controller.pedidoStore.statusPedido == EnumStatusPedido.EmAberto || controller.pedidoStore.statusPedido == EnumStatusPedido.Aceito,
                         child: Expanded(
                           child: OutlinedButton(
-                            onPressed: controller.cancelarPedido,
+                            onPressed: ()=>controller.atualizarStatus(cancelar:true),
                             style: OutlinedButton.styleFrom(side: BorderSide(color: PaletaCores.primaryLight)),
                             child: Text("CANCELAR", style: TextStyle(fontSize: 16)),
+
                           ),
                         ),
                       ),

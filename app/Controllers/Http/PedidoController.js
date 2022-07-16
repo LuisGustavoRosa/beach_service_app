@@ -94,7 +94,7 @@ class PedidoController {
           "empresa": e.vendedor_empresa,
           "telefone": e.vendedor_telefone
         },
-          delete e.vendedor_id;
+        delete e.vendedor_id;
         delete e.vendedor_nome;
         delete e.vendedor_email;
         delete e.vendedor_empresa;
@@ -105,7 +105,7 @@ class PedidoController {
           "nome": e.consumidor_nome,
           "email": e.consumidor_email,
           "telefone": e.consumidor_telefone
-          
+
         }
         delete e.consumidor_id;
         delete e.consumidor_nome;
@@ -126,9 +126,9 @@ class PedidoController {
     console.log(status.status)
     const pedido_ = await Pedido.findOrFail(params.id)
     const pedidoJson = pedido_.toJSON()
-    
-    
-  
+
+
+
     if (status.status == 0) {
       pedidoJson.status = 0
     } else if (status.status == 1) {

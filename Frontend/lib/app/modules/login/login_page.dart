@@ -127,7 +127,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
           alignment: Alignment.centerRight,
           child: TextButton(
             onPressed: () {},
-            child: Text("Esqueceu a senha?"),
+            //child: Text("Esqueceu a senha?"),
             style: ElevatedButton.styleFrom(onPrimary: Colors.white),
           ),
         ),

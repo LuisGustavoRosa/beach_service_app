@@ -29,10 +29,10 @@ abstract class _PedidoController with Store implements IFormController {
 
   @observable
   bool loading;
-  
+
   @observable
   BuildContext context;
-  
+
   @action
   void setContext(BuildContext value) => context = value;
 
@@ -102,12 +102,17 @@ abstract class _PedidoController with Store implements IFormController {
   }
 
   @action
-  Future<void> atualizarStatus() async {
+  Future<void> atualizarStatus({bool cancelar = false}) async {
     try {
+
       sincronizacaoService.stop();
 
       PedidoStore pedidoStore = this.pedidoStore.clone();
-      pedidoStore.setStatusPedido(nextStatusPedido);
+      if(cancelar){
+        pedidoStore.setStatusPedido(EnumStatusPedido.Cancelado);
+      }else{
+        pedidoStore.setStatusPedido(nextStatusPedido);
+      }
       pedidoStore = PedidoStoreFactory.fromDto(await pedidoService.saveOrUpdate(pedidoStore.toDto()));
 
       if (pedidoStore.statusPedido != this.pedidoStore.statusPedido)

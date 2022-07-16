@@ -80,7 +80,7 @@ class PasswordValidator extends Validator {
 
   @override
   bool isError(String value) {
-    if (value.notIsNullOrEmpty() && value.length > 8) {
+    if (value.notIsNullOrEmpty() && value.length >= 8) {
       return false;
     } else {
       return true;
