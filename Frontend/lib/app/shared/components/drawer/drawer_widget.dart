@@ -38,19 +38,16 @@ class DrawerWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(100),
-                      child: Image.network(
-                        "https://ef564920920608e03abb-7d34ef097b6ab6c586dfc84157128505.ssl.cf1.rackcdn.com/PostImagem/36734/foto-de-perfil-profissional_o1eh30s23km6j1lmm1k5r8cvinuj.JPG",
-                        width: 120,
-                        height: 120,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AvatarWidget(),
+                      ],
                     ),
-                    Text(appController.userStore.nome,
-                        style: theme.bodyText2.copyWith(
-                            fontSize: 16, fontWeight: FontWeight.bold)),
-                    Text(appController.userStore.email,
-                        style: theme.bodyText2.copyWith(fontSize: 16)),
+                    DefaultSizedBox(),
+                    Text(appController.userStore.nome, style: theme.bodyText2.copyWith(fontSize: 16, fontWeight: FontWeight.bold)),
+                    Text(appController.userStore.email, style: theme.bodyText2.copyWith(fontSize: 16)),
                   ],
                 ),
               ),

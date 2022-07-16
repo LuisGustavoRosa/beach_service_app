@@ -42,7 +42,7 @@ class ProdutoPageState extends ModularState<ProdutoPage, ProdutoController> {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     // Theme para Button da AppBar
-    final themeAppBar = theme.appBarTheme.textTheme.headline6.copyWith(fontSize: 18, fontWeight: FontWeight.bold);
+    final themeAppBar = theme.appBarTheme.titleTextStyle.copyWith(fontSize: 18, fontWeight: FontWeight.bold);
     final style = themeAppBar.copyWith(color: Colors.grey);
     return Observer(
       builder: (_) => Scaffold(

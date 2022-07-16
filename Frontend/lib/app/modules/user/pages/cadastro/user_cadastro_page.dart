@@ -61,7 +61,7 @@ class _UserCadastroPageState extends State<UserCadastroPage> {
   }
 
   Future<void> _save() async {
-   
+
     try {
       if (_formKey.currentState.validate()) {
         _formKey.currentState.save();
@@ -100,7 +100,7 @@ class _UserCadastroPageState extends State<UserCadastroPage> {
                             borderRadius: BorderRadius.circular(8),
                             color: Colors.white,
                           ),
-                          child: Icon(Icons.add, color: PaletaCores.primaryLight),
+
                         ),
                       ],
                     ),

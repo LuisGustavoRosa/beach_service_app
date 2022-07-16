@@ -98,16 +98,21 @@ abstract class _PedidoController with Store implements IFormController {
 
   @action
   Future<void> cancelarPedido() async {
-    await Modular.to.pushNamed('/$PRODUTO_ROUTE');
+
   }
 
   @action
-  Future<void> atualizarStatus() async {
+  Future<void> atualizarStatus({bool cancelar = false}) async {
     try {
+
       sincronizacaoService.stop();
 
       PedidoStore pedidoStore = this.pedidoStore.clone();
-      pedidoStore.setStatusPedido(nextStatusPedido);
+      if(cancelar){
+        pedidoStore.setStatusPedido(EnumStatusPedido.Cancelado);
+      }else{
+        pedidoStore.setStatusPedido(nextStatusPedido);
+      }
       pedidoStore = PedidoStoreFactory.fromDto(await pedidoService.saveOrUpdate(pedidoStore.toDto()));
 
       if (pedidoStore.statusPedido != this.pedidoStore.statusPedido)

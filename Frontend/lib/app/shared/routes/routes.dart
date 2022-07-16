@@ -5,7 +5,7 @@ const String USER_CADASTRO_ROUTE = "user_cadastro";
 const String TIPO_USER_ROUTE = "tipo_user";
 
 const String PRODUTO_ROUTE = "produto";
-
+const String PEDIDOCANCELADO_ROUTE = "pedidoCancelado";
 const String HOME_ROUTE = "home";
 
 const String PEDIDO_ROUTE = "pedido";
