@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beach_Service_API", "Beach_Service_API.csproj", "{3653FFA5-141A-4516-BBEF-7EE1B72FA2B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beach_Service_APP", "..\Beach_Service_APP\Beach_Service_APP.csproj", "{CD0F638B-2786-4322-998A-DD6C5DCB348A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{3653FFA5-141A-4516-BBEF-7EE1B72FA2B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3653FFA5-141A-4516-BBEF-7EE1B72FA2B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3653FFA5-141A-4516-BBEF-7EE1B72FA2B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD0F638B-2786-4322-998A-DD6C5DCB348A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD0F638B-2786-4322-998A-DD6C5DCB348A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD0F638B-2786-4322-998A-DD6C5DCB348A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CD0F638B-2786-4322-998A-DD6C5DCB348A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD0F638B-2786-4322-998A-DD6C5DCB348A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD0F638B-2786-4322-998A-DD6C5DCB348A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
